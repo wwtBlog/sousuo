@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 from math import tanh
 import sqlite3  as sqlite
 
@@ -79,7 +80,7 @@ class searchnet:
         self.ah = [1.0]*len(self.hiddenids)
         self.ao = [1.0]*len(self.urlids)
 
-        # create weights matrix
+        #创建权重矩阵
         self.wi = [[self.getstrength(wordid,hiddenid,0)
                     for hiddenid in self.hiddenids]
                    for wordid in self.wordids]
